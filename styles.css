@@ -1,0 +1,190 @@
+* {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid #5a04b5;
+    border-bottom: 5px solid #5a04b5;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    /* background-image: url("img/simple_background.jpg"); */
+}
+
+a {
+    text-decoration: none;
+}
+
+.margin-top-large {
+    margin-top: 100px;
+}
+
+.jersey-25-regular {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oswald-regular {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.noto-serif-jp-regular {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mastHead {
+    display: flex;
+    flex-direction: column;
+}
+
+.Logo {
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Logo_main {
+    font-size: 46px;
+}
+
+.Logo_secondary {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.Nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative;
+    margin: 10px 0 0 0;
+}
+
+.Nav_Link {
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #4a4a4a;
+    /*We want these buttons to have a decent touch area so they are easy to click/tap*/
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    /*Styles needed for the button only*/
+    border: 0;
+    background: none;
+}
+
+.Hero_TitleAndIntro {
+    clip-path: polygon(0 6%, 100% 0%, 100% 100%, 0 94%);
+    background-color: #262c28;
+    padding: 80px 20px 20px;
+    margin-top: 30px;
+    position: relative;
+}
+
+#Readings {
+    clip-path: polygon(0 0%, 100% 6%, 100% 94%, 0 100%);
+}
+
+.Hero_Description {
+    font-size: 12px;
+    color: #dddddd;
+    line-height: 1.8;
+    margin-top: 20px;
+    padding-top: 25px;
+    border-top: 1px solid #424242;
+}
+
+.Hero_Title {
+    font-size: 30px;
+    color: #ebebeb;
+}
+
+.Hero_JumpLink {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+    padding: 0 15px;
+    border-radius: 33px;
+    border: 1px solid #089df4;
+    font-size: 13px;
+    color: #fff;
+    justify-content: center;
+    max-width: 300px;
+    margin: 40px auto;
+}
+
+.About {
+    padding: 20px;
+}
+
+.About_Minor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0 0;
+}
+
+.About_MinorTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.About_Minor p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    background-color: #262c28;
+}
+
+.Footer_SectionTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 20px 0 10px;
+}
+
+.Footer_Text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.Footer_Link {
+    color: #fff;
+    text-decoration-line: underline;
+    text-decoration-skip-ink: auto;
+    font-size: 12px;
+    text-decoration-color: #aaa;
+    display: flex;
+    min-height: 40px;
+    align-items: center;
+}

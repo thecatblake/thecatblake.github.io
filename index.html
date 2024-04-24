@@ -2,12 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Responsive Web Design with HTML5 and CSS by Ben Frain</title>
     <link href="styles.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Noto+Serif+JP&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>My website</title>
 </head>
-<body>
-
+<body class="noto-serif-jp-regular">
+    <header class="mastHead">
+        <a href="/" class="Logo">
+            <span class="Logo_main jersey-25-regular">RK</span>
+            <span class="Logo_secondary jersey-25-regular">website</span>
+        </a>
+        <nav class="Nav">
+            <a class="Nav_Link oswald-regular" href="/about">About</a>
+            <a class="Nav_Link oswald-regular" href="/works">Works</a>
+            <a class="Nav_Link oswald-regular" href="/readings">Readings</a>
+        </nav>
+    </header>
+    <main>
+        <section class="Hero">
+            <div class="Hero_TitleAndIntro">
+                <h2 class="Hero_Title jersey-25-regular">
+                    Programming
+                </h2>
+                <p class="Hero_Description">
+                    中学一年生からプログラミングをはじめ、その面白さにずっと惹かれ続けています。今は明治大学の一年生です。画像処理、グラフィックス、機械学習、暗号、ウェブサービス、ゲームなど一通り情報科学の分野に触れ、今は特にお金に興味があります。
+                </p>
+                <a href="/works" class="Hero_JumpLink">作品を見る</a>
+            </div>
+        </section>
+        <section class="About">
+            <div class="About_Minor">
+                <h5 class="About_MinorTitle jersey-25-regular">Problem Solving</h5>
+                <p>
+                    考えながら手探りで最適解を見つけていくのが好きです。数学の問題を解くのも好きです。
+                </p>
+            </div>
+            <div class="About_Minor">
+                <h5 class="About_MinorTitle jersey-25-regular">Communication</h5>
+                <p>
+                    得意と言えるようになりたいです。
+                </p>
+            </div>
+            <div class="About_Minor">
+                <h5 class="About_MinorTitle jersey-25-regular">Programming</h5>
+                <p>
+                    Bitcoin CoreやRaytracerを一から作ったことがあります。
+                </p>
+            </div>
+        </section>
+        <section class="Hero">
+            <div class="Hero_TitleAndIntro" id="Readings">
+                <h2 class="Hero_Title jersey-25-regular">
+                    Readings
+                </h2>
+                <p class="Hero_Description">
+                    クラシックが特に好きで、一番好きな作家は芥川龍之介です。一番好きな作品は <span class="oswald-regular">Oscar Wilds</span> の <span class="oswald-regular">Picture of Dorian Gray</span> で、他に好きな作品は羅生門、芋粥、地獄変、<span class="oswald-regular">Pride and Prejudice, Crime and Punishment, 1984</span> です
+                </p>
+                <a href="/works" class="Hero_JumpLink">読んでいる本を見る</a>
+            </div>
+        </section>
+    </main>
+    <footer class="Footer margin-top-large">
+        <section class="Footer_Block Footer_Block-contact">
+            <h4 class="Footer_SectionTitle jersey-25-regular">Contact</h4>
+            <a href="https://twitter.com/RKaga92084" class="Footer_Link">
+                @RKaga92084 on Twitter
+            </a>
+            <a href="https://github.com/thecatblake" class="Footer_Link">
+                @thecatblake on GitHub
+            </a>
+        </section>
+    </footer>
 </body>
 </html>
