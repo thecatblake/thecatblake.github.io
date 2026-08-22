@@ -1,6 +1,67 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const recentPosts = (await getCollection("blog"))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 5);
+
+const recentStudies = (await getCollection("study"))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 2);
 ---
 
 <Layout>
+	<section class="About">
+		<p>
+			I’m Ryousuke Kaga from Japan, and I’m passionate about Ethereum. I have
+			several goals in my life.
+		</p>
+		<p>
+			First, I want to help make Vitalik’s Ethereum roadmap a reality.
+		</p>
+		<p>
+			Second, I want to become a researcher and contribute something
+			meaningful to the world of science and technology.
+		</p>
+		<p>
+			Finally, I want to bring the cyberpunk vision to life.
+		</p>
+		<p>
+			If you find my work interesting and would like to support my journey,
+			you can support me with Ethereum.
+			0x4Bec3B301799DAD6141316a5165b500DE7A57F1A
+		</p>
+	</section>
+	<section class="About">
+		<h2 class="About_MinorTitle">Recent Studies</h2>
+		<ul class="Nav" style="flex-direction: column; align-items: flex-start;">
+			{
+				recentStudies.map((study) => (
+					<li>
+						<a
+							class="Nav_Link oswald-regular"
+							href={`/study#${study.id}`}
+						>
+							{study.data.title}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+	<section class="About">
+		<h2 class="About_MinorTitle">Recent Blog Posts</h2>
+		<ul class="Nav" style="flex-direction: column; align-items: flex-start;">
+			{
+				recentPosts.map((post) => (
+					<li>
+						<a class="Nav_Link oswald-regular" href={`/blog/${post.id}`}>
+							{post.data.title}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
 </Layout>

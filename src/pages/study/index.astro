@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+const studies = (await getCollection("study")).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const rendered = await Promise.all(
+	studies.map(async (study) => ({
+		study,
+		Content: (await render(study)).Content,
+	})),
+);
+---
+
+<Layout title="Study">
+	<section class="Study">
+		{
+			rendered.map(({ study, Content }) => (
+				<article class="Study_Item" id={study.id}>
+					<h2 class="Study_Title">
+						<a href={study.data.url} target="_blank" rel="noopener noreferrer">
+							{study.data.title}
+						</a>
+					</h2>
+					<p class="Study_Period oswald-regular">{study.data.period}</p>
+					<div class="Study_Body">
+						<Content />
+					</div>
+				</article>
+			))
+		}
+	</section>
+</Layout>
