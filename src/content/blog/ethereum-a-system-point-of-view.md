@@ -1,6 +1,6 @@
 ---
 title: "Ethereumのシステムとしての全体像"
-date: 2026-08-22
+date: 2026-08-29
 ---
 
 writing in progress
