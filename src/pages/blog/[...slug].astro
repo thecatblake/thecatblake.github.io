@@ -24,6 +24,6 @@ const { Content } = await render(post);
 				day: "numeric",
 			})}
 		</p>
-		<Content />
+		{post.data.draft ? <p>この記事は非公開です。</p> : <Content />}
 	</article>
 </Layout>

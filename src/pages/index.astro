@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const recentPosts = (await getCollection("blog"))
+const recentPosts = (await getCollection("blog", ({ data }) => !data.draft))
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	.slice(0, 5);
 
